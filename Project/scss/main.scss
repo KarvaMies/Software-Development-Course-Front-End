@@ -1,6 +1,6 @@
-$primary-color: #444;
+@import 'config';
 
 body {
     background: $primary-color;
-    color: white;
+    color: rgb(26, 26, 26);
 }
