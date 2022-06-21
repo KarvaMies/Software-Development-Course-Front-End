@@ -119,8 +119,7 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
-  width: fit-content;
-  align-items: center; }
+  width: fit-content; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
@@ -146,7 +145,7 @@ header {
 
 main {
   padding: 4rem;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   align-items: center; }
   main .icons {
     margin-top: 1rem; }
@@ -156,6 +155,7 @@ main {
         color: #ee1a48;
         transition: all 0.5s ease-out; }
   main#home {
+    height: calc(100vh - 60px);
     overflow: hidden; }
     main#home .info, main#home .boxes {
       display: flex;
@@ -187,24 +187,39 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem; }
-  .destinations img {
-    width: 100%;
-    border: 3px #fff solid; }
-    .destinations img:hover {
+  .destinations .btn {
+    position: relative;
+    text-align: center;
+    border: 3px #fff solid;
+    color: #000;
+    background: #c4c4c4; }
+    .destinations .btn img {
+      width: 100%;
+      height: 80%;
+      border-bottom: 3px #fff solid;
+      margin-bottom: 0; }
+    .destinations .btn .date {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #fff;
+      padding: 0.25rem 0.5rem;
+      opacity: 0.8;
+      transform: translate(-50%, -50%); }
+    .destinations .btn .read {
+      background: #c4c4c4;
+      display: block;
+      padding: 0.5rem 1rem;
+      margin-top: 0;
+      font-size: x-large;
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translate(-50%); }
+    .destinations .btn:hover {
       opacity: 0.5;
       border-color: #ee1a48;
       transition: all 0.5s ease-out; }
-  .destinations .btn {
-    display: block;
-    padding: 0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.3rem;
-    background: #c4c4c4;
-    color: #000;
-    text-align: center; }
-    .destinations .btn:hover {
-      background: #ee1a48;
-      color: #000; }
 
 #main-footer {
   text-align: center;
