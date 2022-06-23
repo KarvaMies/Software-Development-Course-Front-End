@@ -180,7 +180,6 @@ main {
     main#home .links {
       margin: 0;
       padding: 0;
-      background: #373737;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -315,15 +314,13 @@ main {
     div.profile.show, div.links.show {
       transform: translate3d(0, 0, 0); }
   .profile {
-    height: 50vh;
-    background: #515151; }
+    height: 50vh; }
     .profile h1 {
       font-size: 30px; }
     .profile h2 {
       font-size: 24px; }
   .links {
-    height: 50vh;
-    background: #373737; }
+    height: 50vh; }
     .links span {
       font-size: 20px; }
   div.videos, div.destinations {
