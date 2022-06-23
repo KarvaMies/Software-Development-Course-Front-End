@@ -3,11 +3,7 @@ $secondary-color: #ee1a48;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $video-image: url(../img/background2.jpg);
-// $madrid-image: url(../img/destinations/madrdid.jpg);
-// $peking-image: url(../img/destinations/peking.jpg);
-// $rio-image: url(../img/destinations/rio-de-janeiro.jpg);
-// $tokio-image: url(../img/destinations/tokio.jpg);
-// $nairobi-image: url(../img/destinations/nairobi.jpg);
+$blogs-image: url(../img/background3.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -35,13 +31,20 @@ $background-opacity: 0.9;
                 background-image: $home-image;
             }
 
-            &.bg-2 {
-                background-image: $video-image;
+            &.bg-2, &.bg-3 {
                 background-repeat: no-repeat;
                 position: relative;
                 background-position: center;
                 background-repeat: no-repeat;
                 
+            }
+
+            &.bg-2 {
+                background-image: $blogs-image;
+            }
+
+            &.bg-3 {
+                background-image: $video-image;
             }
         }
     }

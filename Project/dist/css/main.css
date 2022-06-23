@@ -114,12 +114,15 @@ body {
       background: rgba(68, 68, 68, 0.9); }
     body#bg-img.bg-1 {
       background-image: url(../img/background.jpg); }
-    body#bg-img.bg-2 {
-      background-image: url(../img/background2.jpg);
+    body#bg-img.bg-2, body#bg-img.bg-3 {
       background-repeat: no-repeat;
       position: relative;
       background-position: center;
       background-repeat: no-repeat; }
+    body#bg-img.bg-2 {
+      background-image: url(../img/background3.jpg); }
+    body#bg-img.bg-3 {
+      background-image: url(../img/background2.jpg); }
 
 h1,
 h2,
@@ -163,8 +166,9 @@ main {
         transition: all 0.5s ease-out; }
   main#home {
     height: calc(100vh - 60px);
-    overflow: hidden; }
-    main#home .info, main#home .boxes {
+    overflow: hidden;
+    width: 100%; }
+    main#home .profile, main#home .links {
       display: flex;
       flex-flow: column wrap;
       align-items: center;
@@ -173,21 +177,24 @@ main {
       width: 50%;
       height: 100vh;
       overflow: hidden; }
-    main#home .boxes {
+    main#home .links {
+      margin: 0;
+      padding: 0;
+      background: #373737;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
       align-items: center; }
-      main#home .boxes div {
+      main#home .links div {
         font-size: 2rem;
         border: 3px #fff solid;
         padding: 1rem;
         margin-bottom: 3rem;
         transition: all 0.5s ease-out; }
-        main#home .boxes div:hover {
+        main#home .links div:hover {
           background: #ee1a48;
           color: #000; }
-          main#home .boxes div:hover span {
+          main#home .links div:hover span {
             color: #000; }
   main#videos {
     padding-left: 5rem; }
@@ -217,10 +224,11 @@ main {
       transform: translate(-50%, -50%); }
     .destinations .btn .read {
       background: #c4c4c4;
+      width: fit-content;
+      height: fit-content;
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0;
       margin-top: 0;
-      font-size: x-large;
       position: absolute;
       bottom: 1rem;
       left: 50%;
@@ -263,3 +271,64 @@ main {
   color: #fff;
   height: 60px;
   opacity: 0.5; }
+
+@media screen and (min-width: 1171px) {
+  div.destinations {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  div.destinations {
+    grid-template-columns: repeat(2, 1fr); }
+  div.videos {
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px; }
+  div.profile, div.links {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    div.profile.show, div.links.show {
+      transform: translate3d(0, 0, 0); }
+  .profile {
+    height: 50vh;
+    background: #515151; }
+    .profile h1 {
+      font-size: 30px; }
+    .profile h2 {
+      font-size: 24px; }
+  .links {
+    height: 50vh;
+    background: #373737; }
+    .links span {
+      font-size: 20px; }
+  div.videos, div.destinations {
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }

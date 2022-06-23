@@ -1,0 +1,100 @@
+// Wide screens
+@include mediaXl {
+    div.destinations {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+    div.destinations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    div.videos {
+        grid-template-columns: 1fr;
+    }
+}
+// Tablets & Small Laptops
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav, 
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100%, 0, 0);
+
+        .portrait {
+            background: url('../img/portrait_small.jpg');
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    div.profile, div.links {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .profile {
+        height: 50vh;
+        background: lighten($primary-color, 5);
+        
+        h1 {
+            font-size: 30px;
+        } 
+        
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .links {
+        height: 50vh;
+        background: darken($primary-color, 5);
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+    div.videos, div.destinations {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Smartphones
+@include mediaSm {
+    main#home h1 {
+        margin-top: 10vh;
+    }
+}
