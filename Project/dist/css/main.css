@@ -101,7 +101,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -113,6 +112,14 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(68, 68, 68, 0.9); }
+    body#bg-img.bg-1 {
+      background-image: url(../img/background.jpg); }
+    body#bg-img.bg-2 {
+      background-image: url(../img/background2.jpg);
+      background-repeat: no-repeat;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat; }
 
 h1,
 h2,
@@ -182,6 +189,8 @@ main {
           color: #000; }
           main#home .boxes div:hover span {
             color: #000; }
+  main#videos {
+    padding-left: 5rem; }
 
 .destinations {
   display: grid;
@@ -217,6 +226,32 @@ main {
       left: 50%;
       transform: translate(-50%); }
     .destinations .btn:hover {
+      opacity: 0.5;
+      border-color: #ee1a48;
+      transition: all 0.5s ease-out; }
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.7rem; }
+  .videos .video {
+    position: relative;
+    text-align: center;
+    border: 3px #fff solid;
+    color: #000;
+    height: 80%; }
+    .videos .video img {
+      margin-bottom: 0;
+      width: 100%;
+      height: 100%; }
+    .videos .video a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #ee1a48;
+      opacity: 0.8;
+      transform: translate(-50%, -50%); }
+    .videos .video:hover {
       opacity: 0.5;
       border-color: #ee1a48;
       transition: all 0.5s ease-out; }

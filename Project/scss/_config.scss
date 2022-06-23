@@ -2,6 +2,7 @@ $primary-color: #444;
 $secondary-color: #ee1a48;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
+$video-image: url(../img/background2.jpg);
 // $madrid-image: url(../img/destinations/madrdid.jpg);
 // $peking-image: url(../img/destinations/peking.jpg);
 // $rio-image: url(../img/destinations/rio-de-janeiro.jpg);
@@ -16,7 +17,6 @@ $background-opacity: 0.9;
 @mixin background {
     @if $show-home-image {
         &#bg-img {
-            background: $home-image;
             background-attachment: fixed;
             background-size: cover;
             
@@ -29,6 +29,19 @@ $background-opacity: 0.9;
                 height: 100%;
                 z-index: -1;
                 background: rgba($primary-color, $background-opacity);
+            }
+
+            &.bg-1 {
+                background-image: $home-image;
+            }
+
+            &.bg-2 {
+                background-image: $video-image;
+                background-repeat: no-repeat;
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+                
             }
         }
     }
